@@ -17,3 +17,8 @@ input,
 button {
   margin-bottom: 15px;
 }
+
+.textLink {
+  color: midnightblue;
+  font-size: 18px;
+}

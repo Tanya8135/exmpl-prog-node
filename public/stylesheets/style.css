@@ -22,3 +22,27 @@ button {
   color: midnightblue;
   font-size: 18px;
 }
+
+.textColor {
+  color: #2a5d44;
+  font-weight: 600;
+}
+
+.resText {
+  color: #2b8a44;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.nameTextColor {
+  color: #561a5a;
+  font-weight: 400 !important;
+}
+
+.btnSubmit {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #9f2ea5;
+  width: 100px;
+  padding: 10px 8px;
+}

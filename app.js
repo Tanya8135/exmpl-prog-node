@@ -3,6 +3,13 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+require('dotenv').config(); /* подключает dotenv */
+
+process.env.SECRET_KEY;
+process.env.NODE_ENV;
+
+// console.log('SECRET_KEY:', process.env.SECRET_KEY);
+// console.log('NODE_ENV:', process.env.NODE_ENV);
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -23,12 +30,12 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // обработка не существующего роута или 404
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler сам процесс обработки 404 или не существу.роута
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

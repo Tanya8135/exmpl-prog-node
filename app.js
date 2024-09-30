@@ -3,9 +3,13 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+require('dotenv').config(); /* подключает dotenv */
 
 process.env.SECRET_KEY;
 process.env.NODE_ENV;
+
+// console.log('SECRET_KEY:', process.env.SECRET_KEY);
+// console.log('NODE_ENV:', process.env.NODE_ENV);
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
